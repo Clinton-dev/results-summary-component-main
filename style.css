@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+:root {
+  /* Primary Colors */
+  --primary-light-red: hsl(0, 100%, 67%);
+  --primary-orangey-yellow: hsl(39, 100%, 56%);
+  --primary-green-teal: hsl(166, 100%, 37%);
+  --primary-cobalt-blue: hsl(234, 85%, 45%);
+
+  /* Gradient Colors */
+  --gradient-light-slate-blue-bg: hsl(252, 100%, 67%);
+  --gradient-light-royal-blue-bg: hsl(241, 81%, 54%);
+  --gradient-violet-blue-circle: hsla(256, 72%, 46%, 1);
+  --gradient-persian-blue-circle: hsla(241, 72%, 46%, 0);
+
+  /* Neutral Colors */
+  --neutral-white: hsl(0, 0%, 100%);
+  --neutral-pale-blue: hsl(221, 100%, 96%);
+  --neutral-light-lavender: hsl(241, 100%, 89%);
+  --neutral-dark-gray-blue: hsl(224, 30%, 27%);
+
+  --font-size-medium: 18px;
+}
+
+/* css resets */
+/* Box-sizing reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Margin and padding reset */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+li,
+blockquote,
+figure,
+fieldset,
+legend,
+input,
+textarea,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+}
+
+/* Typography reset */
+body,
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+}
+
+/* Remove list styles on ul, ol elements */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Reset anchor styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove default button styles */
+button {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+/* Remove outline on active elements */
+a,
+button,
+input,
+textarea,
+select {
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+/* Remove default styles on form elements */
+input,
+select,
+textarea,
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+}
+
+/* Set a base font size for better scalability */
+html {
+  font-size: 16px;
+}
+
+/* Remove inner spacing in table cells */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Ensure images don't overflow their containers */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Standardize the appearance of form elements */
+input,
+textarea,
+button,
+select {
+  font: inherit;
+}
+
+/* Remove the default button border in Firefox */
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* Reset the default styles on preformatted text */
+pre {
+  white-space: pre-wrap;
+}
+
+/* Ensure that text remains selectable and user-scalable */
+body {
+  user-select: text;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+}
+
+/* General styling */
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: var(--font-size-medium);
+  background-color: var(--neutral-white);
+  font-weight: 500;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.summary__card {
+  border: 1px solid var(--neutral-pale-blue);
+  border-radius: 1.25rem;
+  display: flex;
+  min-height: 50vh;
+}
+
+.result {
+  background: linear-gradient(
+    to bottom,
+    var(--gradient-light-slate-blue-bg),
+    var(--gradient-light-royal-blue-bg)
+  );
+  color: var(--neutral-pale-blue);
+  flex: 1;
+  border-radius: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+  text-align: center;
+
+  /* display: ; */
+}
+
+.result__title {
+  margin-bottom: 1.5rem;
+}
+
+.circle {
+  /* border: 1px solid; */
+  box-sizing: content-box;
+  border-radius: 50%;
+  padding: 2rem;
+  background: linear-gradient(
+    to bottom,
+    var(--gradient-violet-blue-circle),
+    var(--gradient-persian-blue-circle)
+  );
+  margin-bottom: 1.5rem;
+}
+
+.circle h2 {
+  font-weight: 900;
+  font-size: 3rem;
+  color: var(--neutral-white);
+}
+.circle p {
+  color: var(--neutral-light-lavender);
+  font-size: 0.9rem;
+}
+
+.summary {
+  flex: 1;
+  padding: 2rem 1.5rem;
+}
+
+.summary h3 {
+  font-weight: 900;
+  color: var(--neutral-dark-gray-blue);
+}
+
+.summary button {
+  color: var(--neutral-white);
+  background-color: var(--neutral-dark-gray-blue);
+  width: 90%;
+  border-radius: 2rem;
+  padding: 1rem 0;
+}
+
+.summary button:hover,
+button:focus {
+  background: linear-gradient(
+    to bottom,
+    var(--gradient-light-slate-blue-bg),
+    var(--gradient-light-royal-blue-bg)
+  );
+}
