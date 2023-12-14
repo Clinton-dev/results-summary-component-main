@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
 :root {
   /* Primary Colors */
-  --primary-light-red: hsl(0, 100%, 67%);
-  --primary-orangey-yellow: hsl(39, 100%, 56%);
-  --primary-green-teal: hsl(166, 100%, 37%);
-  --primary-cobalt-blue: hsl(234, 85%, 45%);
+  --primary-light-red: hsla(0, 100%, 67%, 0.3);
+  --primary-orangey-yellow: hsla(39, 100%, 56%, 0.3);
+  --primary-green-teal: hsla(166, 100%, 37%, 0.3);
+  --primary-cobalt-blue: hsla(234, 85%, 45%, 0.3);
 
   /* Gradient Colors */
   --gradient-light-slate-blue-bg: hsl(252, 100%, 67%);
@@ -184,7 +184,17 @@ body {
   border: 1px solid var(--neutral-pale-blue);
   border-radius: 1.25rem;
   display: flex;
+  flex-direction: column;
   min-height: 50vh;
+  box-shadow: 10px 10px 13px -3px rgba(48, 59, 90, 0.27);
+  -webkit-box-shadow: 10px 10px 13px -3px rgba(48, 59, 90, 0.27);
+  -moz-box-shadow: 10px 10px 13px -3px rgba(48, 59, 90, 0.27);
+}
+
+@media (width> 500px) {
+  .summary__card {
+    flex-direction: row;
+  }
 }
 
 .result {
@@ -199,10 +209,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem 0;
+  padding: 2rem 1.5rem;
   text-align: center;
-
-  /* display: ; */
 }
 
 .result__title {
@@ -212,7 +220,7 @@ body {
 .circle {
   /* border: 1px solid; */
   box-sizing: content-box;
-  border-radius: 50%;
+  border-radius: 90%;
   padding: 2rem;
   background: linear-gradient(
     to bottom,
@@ -240,12 +248,13 @@ body {
 .summary h3 {
   font-weight: 900;
   color: var(--neutral-dark-gray-blue);
+  margin-bottom: 2rem;
 }
 
 .summary button {
   color: var(--neutral-white);
   background-color: var(--neutral-dark-gray-blue);
-  width: 90%;
+  width: 100%;
   border-radius: 2rem;
   padding: 1rem 0;
 }
@@ -257,4 +266,43 @@ button:focus {
     var(--gradient-light-slate-blue-bg),
     var(--gradient-light-royal-blue-bg)
   );
+}
+
+.summary__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  color: var(--neutral-pale-blue);
+  padding: 1rem 0.5rem;
+  border-radius: 1rem;
+}
+
+.summary__wrapper p strong {
+  font-weight: 900;
+  color: var(--neutral-dark-gray-blue);
+}
+
+.summary__wrapper__1 {
+  background-color: var(--primary-light-red);
+  color: hsl(0, 100%, 67%);
+}
+
+.summary__wrapper__2 {
+  background-color: var(--primary-orangey-yellow);
+}
+
+.summary__wrapper__3 {
+  background-color: var(--primary-green-teal);
+}
+
+.summary__wrapper__4 {
+  background-color: var(--primary-cobalt-blue);
+}
+
+.summary__icons {
+  display: flex;
+}
+
+.summary__icons img {
+  margin-right: 1rem;
 }
