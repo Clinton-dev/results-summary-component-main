@@ -217,6 +217,18 @@ body {
   margin-bottom: 1.5rem;
 }
 
+@keyframes fadeInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-2rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
 .circle {
   /* border: 1px solid; */
   box-sizing: content-box;
@@ -234,6 +246,7 @@ body {
   font-weight: 900;
   font-size: 3rem;
   color: var(--neutral-white);
+  animation: fadeInFromLeft 2.5s ease;
 }
 .circle p {
   color: var(--neutral-light-lavender);
