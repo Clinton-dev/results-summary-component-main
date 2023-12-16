@@ -182,7 +182,7 @@ body {
 
 .summary__card {
   border: 1px solid var(--neutral-pale-blue);
-  border-radius: 1.25rem;
+  border-radius: 1.9rem;
   display: flex;
   flex-direction: column;
   min-height: 50vh;
@@ -207,6 +207,7 @@ body {
   flex: 1;
   border-radius: inherit;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   padding: 2rem 1.5rem;
@@ -233,7 +234,7 @@ body {
   /* border: 1px solid; */
   box-sizing: content-box;
   border-radius: 90%;
-  padding: 2rem;
+  padding: 2rem 2.5rem;
   background: linear-gradient(
     to bottom,
     var(--gradient-violet-blue-circle),
